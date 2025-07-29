@@ -1667,19 +1667,20 @@ a {
   }
 }
 
+/* new updates in theme */
 @font-face {
   font-family: "ClashGrotesk-Regular";
   src: url("../fonts/OTF/ClashGrotesk-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; /* Optional: improves performance by swapping fonts after loading */
+  font-display: swap;
 }
 @font-face {
   font-family: "ClashGrotesk-Regular";
   src: url("../fonts/OTF/ClashGrotesk-Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; /* Optional: improves performance by swapping fonts after loading */
+  font-display: swap;
 }
 
 .font-clash {
