@@ -1697,3 +1697,13 @@ a {
   background-color: #0b2523 !important;
   border: 1px solid #0b2523;
 }
+.bg-sky-blue tr th {
+  background-color: #f7f8fa;
+}
+
+.font-clash-green {
+  font-family: "ClashGrotesk-Medium", sans-serif;
+  color: #0f2f2c;
+  font-size: 16px;
+  font-weight: 500;
+}
