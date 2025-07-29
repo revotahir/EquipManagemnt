@@ -194,7 +194,8 @@ a {
 .top-header .navbar .dropdown-large .dropdown-item:hover {
   border-radius: 10px;
   color: #1e2125;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  background-color: rgba(52, 255, 65, 0.1);
 }
 
 .top-header .navbar .dropdown-item .setting-icon {
@@ -1666,19 +1667,20 @@ a {
   }
 }
 
+/* new updates in theme */
 @font-face {
   font-family: "ClashGrotesk-Regular";
   src: url("../fonts/OTF/ClashGrotesk-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; /* Optional: improves performance by swapping fonts after loading */
+  font-display: swap;
 }
 @font-face {
   font-family: "ClashGrotesk-Regular";
   src: url("../fonts/OTF/ClashGrotesk-Medium.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; /* Optional: improves performance by swapping fonts after loading */
+  font-display: swap;
 }
 
 .font-clash {
@@ -1696,4 +1698,14 @@ a {
 .btn-clash:hover {
   background-color: #0b2523 !important;
   border: 1px solid #0b2523;
+}
+.bg-sky-blue tr th {
+  background-color: #f7f8fa;
+}
+
+.font-clash-green {
+  font-family: "ClashGrotesk-Medium", sans-serif;
+  color: #0f2f2c;
+  font-size: 16px;
+  font-weight: 500;
 }
