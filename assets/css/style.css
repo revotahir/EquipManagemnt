@@ -194,7 +194,8 @@ a {
 .top-header .navbar .dropdown-large .dropdown-item:hover {
   border-radius: 10px;
   color: #1e2125;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
+  background-color: rgba(52, 255, 65, 0.1);
 }
 
 .top-header .navbar .dropdown-item .setting-icon {
