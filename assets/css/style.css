@@ -1768,7 +1768,18 @@ a {
   position: absolute;
   border: 1px solid #34ff67;
   border-right: none;
-  width: 50%;
+  width: 40%;
+}
+.form::after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid #34ff67;
+  border-left: none;
+  width: 40%;
 }
 .main-box {
   display: flex;
