@@ -15,10 +15,6 @@
       href="assets/plugins/metismenu/css/metisMenu.min.css"
       rel="stylesheet"
     />
-    <link
-      href="assets/plugins/datatable/css/dataTables.bootstrap5.min.css"
-      rel="stylesheet"
-    />
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/bootstrap-extended.css" rel="stylesheet" />
@@ -42,7 +38,7 @@
     <link href="assets/css/semi-dark.css" rel="stylesheet" />
     <link href="assets/css/header-colors.css" rel="stylesheet" />
 
-    <title>All Workforce</title>
+    <title>Add Equiprnent</title>
   </head>
 
   <body>
@@ -113,9 +109,7 @@
                       </div>
                     </a>
                   </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
+                  <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a class="dropdown-item" href="pages-user-profile.html">
                       <div class="d-flex align-items-center">
@@ -176,9 +170,7 @@
                       </div>
                     </a>
                   </li>
-                  <li>
-                    <hr class="dropdown-divider" />
-                  </li>
+                  <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a
                       class="dropdown-item"
@@ -199,7 +191,6 @@
         </nav>
       </header>
       <!--end top header-->
-
       <!--start sidebar -->
       <aside class="sidebar-wrapper" data-simplebar="true">
         <div class="sidebar-header">
@@ -292,60 +283,69 @@
         <!--end breadcrumb-->
 
         <div class="row">
-          <div class="col-xl-3 mx-auto">
+          <div class="col-xl-6 mx-auto">
             <div class="card">
               <div class="card-body">
                 <div class="border p-3 rounded">
-                  <h6 class="mb-0 text-uppercase">Filter By</h6>
+                  <h6 class="mb-0 text-uppercase">Add Equipment</h6>
                   <hr />
                   <form class="row g-3">
                     <div class="col-12">
-                      <label class="form-label">Skill</label>
-                      <select name="skill" id="skill" class="form-control">
-                        <option value="">Select Skill</option>
-                        <option value="">Skill 1</option>
-                        <option value="">Skill 3</option>
-                        <option value="">Skill 4</option>
-                      </select>
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label"> Name</label>
+                      <label class="form-label">Equipment Name</label>
                       <input
                         type="text"
                         class="form-control"
-                        placeholder="Enter Person Name"
+                        placeholder="Enter Equipment Name"
                       />
                     </div>
+                    <div class="col-12">
+                      <div class="d-flex align-items-center gap-20 mb-3">
+                        <label class="form-label mb-0"
+                          > Equipment Category</label
+                        >
 
-                    <div class="col-12">
-                      <label class="form-label">Phone Number</label>
-                      <input
-                        type="number"
-                        class="form-control"
-                        placeholder="Enter Phone Number"
-                      />
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label">Email</label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="Enter Email Address"
-                      />
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label">Status</label>
+                        <!-- Button trigger modal -->
+                        <button
+                          type="button"
+                          class="btn btn-primary btn-clash-sm"
+                          data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"
+                        >
+                          Equipment Category
+                        </button>
+                      </div>
                       <select name="skill" id="skill" class="form-control">
-                        <option value="">Select Status</option>
-                        <option value="">Status 1</option>
-                        <option value="">Status 3</option>
-                        <option value="">Status 4</option>
+                        <option value="">Select  Equipment Category</option>
+                        <option value="">Equipment Category 1</option>
+                        <option value="">Equipment Category 3</option>
+                        <option value="">Equipment Category 4</option>
                       </select>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label">Upload Image</label>
+                      <input type="file" class="form-control" />
+                    </div>
+                    <!-- <div class="col-12">
+                      <label class="form-label">Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Enter Password"
+                      />
+                    </div> -->
+                    <div class="col-12">
+                      <label class="form-label">Description</label>
+                      <textarea
+                        class="form-control"
+                        placeholder="Write Here"
+                        rows="4"
+                        cols="4"
+                      ></textarea>
                     </div>
                     <div class="col-12">
                       <div class="d-grid">
                         <button type="submit" class="btn btn-primary btn-clash">
-                          Apply Filters
+                          Add Equipment
                         </button>
                       </div>
                     </div>
@@ -354,126 +354,8 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-9 mx-auto">
-            <div class="card">
-              <div class="card-body">
-                <div
-                  class="d-flex align-items-center justify-spc-btw flex-col-md"
-                >
-                  <h5 class="mb-0">Workforce List</h5>
-                  <div class="d-flex gap-20 justify-spc-btw-md flex-col-sm">
-                    <div class="d-grid">
-                      <!-- This is your button, now wrapped in a label -->
-                      <!-- Button trigger modal -->
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-clash-sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
-                      >
-                        Add Person
-                      </button>
-                    </div>
-                    <div class="d-grid">
-                      <!-- Manage Skills Button -->
-                      <button
-                        type="button"
-                        class="btn btn-primary btn-clash-sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#manageskills"
-                      >
-                        Manage Skills
-                      </button>
-                    </div>
-                    <!-- <form class="ms-auto position-relative"> -->
-                    <form class="position-relative">
-                      <div
-                        class="position-absolute top-50 translate-middle-y search-icon px-3"
-                      >
-                        <i class="bi bi-search"></i>
-                      </div>
-                      <input
-                        class="form-control ps-5"
-                        type="text"
-                        placeholder="search"
-                      />
-                    </form>
-                  </div>
-                </div>
-                <div class="table-responsive mt-3">
-                  <table class="table align-middle">
-                    <thead class="table-secondary bg-sky-blue font-clash-green">
-                      <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Skill</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <div
-                            class="d-flex align-items-center gap-3 cursor-pointer"
-                          >
-                            <img
-                              src="assets/images/avatars/avatar-1.png"
-                              class="rounded-circle"
-                              width="44"
-                              height="44"
-                              alt=""
-                            />
-                            <div class="">
-                              <p class="mb-0">Thomas Hardy</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td>sarah12@gmail.com</td>
-                        <td>345-6788990</td>
-                        <td>Forklift</td>
-                        <td>
-                          <span class="badge text-success">Active</span>
-                        </td>
-                        <td>
-                          <div
-                            class="table-actions d-flex align-items-center gap-3 fs-6"
-                          >
-                            <a
-                              href="javascript:;"
-                              class="text-primary"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="bottom"
-                              title="Views"
-                              ><i class="bi bi-eye-fill"></i
-                            ></a>
-                            <a
-                              href="javascript:;"
-                              class="text-warning"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="bottom"
-                              title="Edit"
-                              ><i class="bi bi-pencil-fill"></i
-                            ></a>
-                            <a
-                              href="javascript:;"
-                              class="text-danger"
-                              data-bs-toggle="tooltip"
-                              data-bs-placement="bottom"
-                              title="Delete"
-                              ><i class="bi bi-trash-fill"></i
-                            ></a>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
+        <!--end row-->
 
         <!--end row-->
       </main>
@@ -492,119 +374,9 @@
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add Person</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="row">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="border p-3 rounded">
-                      <h6 class="mb-0 text-uppercase">Add workforce</h6>
-                      <hr />
-                      <form class="row g-3">
-                        <div class="col-12">
-                          <label class="form-label">Person Name</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Enter Person Name"
-                          />
-                        </div>
-                        <div class="col-12">
-                          <label class="form-label">Skill</label>
-                          <select name="skill" id="skill" class="form-control">
-                            <option value="">Select Skill</option>
-                            <option value="">Skill 1</option>
-                            <option value="">Skill 3</option>
-                            <option value="">Skill 4</option>
-                          </select>
-                        </div>
-                        <div class="col-12">
-                          <label class="form-label">Upload Image</label>
-                          <input type="file" class="form-control" />
-                        </div>
-                        <div class="col-6">
-                          <label class="form-label">Phone Number</label>
-                          <input
-                            type="number"
-                            class="form-control"
-                            placeholder="Enter Phone Number"
-                          />
-                        </div>
-                        <div class="col-6">
-                          <label class="form-label">Email</label>
-                          <input
-                            type="email"
-                            class="form-control"
-                            placeholder="Enter Email Address"
-                          />
-                        </div>
-                        <!-- <div class="col-12">
-                      <label class="form-label">Password</label>
-                      <input
-                        type="password"
-                        class="form-control"
-                        placeholder="Enter Password"
-                      />
-                    </div> -->
-                        <div class="col-12">
-                          <label class="form-label">Additional Note</label>
-                          <textarea
-                            class="form-control"
-                            rows="4"
-                            cols="4"
-                          ></textarea>
-                        </div>
-                        <div class="col-12">
-                          <div class="d-grid">
-                            <button
-                              type="submit"
-                              class="btn btn-primary btn-clash"
-                            >
-                              Add Workforce
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- popup end -->
-
-      <!-- second popup here -->
-
-      <div
-        class="modal fade"
-        id="manageskills"
-        tabindex="-1"
-        aria-labelledby="manageskillsLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="manageskillsLabel">Manage Skills</h5>
+              <h5 class="modal-title" id="exampleModalLabel">
+                Equipment Category
+              </h5>
               <button
                 type="button"
                 class="btn-close"
@@ -620,21 +392,21 @@
                   <div class="card-body">
                     <div class="border p-4 rounded">
                       <div class="card-title d-flex align-items-center">
-                        <h5 class="mb-0">Add New Skill</h5>
+                        <h5 class="mb-0">Manage Equipment</h5>
                       </div>
                       <hr />
                       <div class="row mb-3">
                         <label
                           for="inputEnterYourName"
                           class="col-sm-3 col-form-label"
-                          >New Skill Name</label
+                          >New Equipment Name</label
                         >
                         <div class="col-sm-9">
                           <input
                             type="text"
                             class="form-control"
                             id="inputEnterYourName"
-                            placeholder="Enter New Skill Name"
+                            placeholder="Enter New Equipment Name"
                           />
                         </div>
                       </div>
@@ -649,7 +421,7 @@
                             class="form-control"
                             id="inputAddress4"
                             rows="3"
-                            placeholder="Address"
+                            placeholder="Write Description"
                           ></textarea>
                         </div>
                       </div>
@@ -661,7 +433,7 @@
                             type="submit"
                             class="btn btn-primary px-5 btn-clash"
                           >
-                            Add Manage Skill
+                            Add Equipement Skill
                           </button>
                         </div>
                       </div>
@@ -685,7 +457,7 @@
         </div>
       </div>
 
-      <!-- second popup end -->
+      <!-- popup end -->
 
       <!--start overlay-->
       <div class="overlay nav-toggle-icon"></div>
@@ -707,9 +479,6 @@
     <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
     <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
     <script src="assets/js/pace.min.js"></script>
-    <script src="assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-    <script src="assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
-    <script src="assets/js/table-datatable.js"></script>
     <!--app-->
     <script src="assets/js/app.js"></script>
   </body>
