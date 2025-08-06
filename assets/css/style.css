@@ -1738,6 +1738,8 @@ a {
 .reg-page {
   background: url("../images/d9481a5f13f611abc880dabbcce0f5ed92e15492.webp")
     fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-color: rgba(15, 47, 44, 0.82);
   background-blend-mode: overlay;
   width: 100%;
@@ -1769,6 +1771,7 @@ a {
   border: 1px solid #34ff67;
   border-right: none;
   width: 40%;
+  z-index: 1;
 }
 .form::after {
   top: 0;
@@ -1780,6 +1783,7 @@ a {
   border: 1px solid #34ff67;
   border-left: none;
   width: 40%;
+  z-index: 1;
 }
 .main-box {
   display: flex;
@@ -1798,6 +1802,7 @@ a {
   font-size: 36px;
   text-transform: uppercase;
   font-weight: 600;
+  text-align: center;
 }
 .sub-heading {
   color: #ffffff;
@@ -1828,6 +1833,7 @@ a {
   font-family: "Manrope", sans-serif;
   font-size: 16px;
   font-weight: 400;
+  z-index: 2;
   transition: all 0.3s ease;
 }
 .inputs input:focus {
@@ -1845,8 +1851,50 @@ a {
 .fot-pass {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: start;
+  gap: 10px;
+  align-items: center; /* Add this to vertically align items */
 }
+
+.fot-pass input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.fot-pass input[type="checkbox"]:checked {
+  background-color: transparent;
+}
+
+.fot-pass input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.fot-pass span {
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
 .fot-pass a {
   color: #ffffff;
   font-family: "Manrope", sans-serif;
@@ -1854,6 +1902,7 @@ a {
   font-weight: 500;
   transition: all 0.3s ease;
 }
+
 .fot-pass a:hover {
   color: #34ff67;
   transition: all 0.3s ease;
@@ -1893,10 +1942,14 @@ a {
     flex-direction: column;
     gap: 10px;
   }
+  .heading {
+    font-size: 26px;
+  }
   .main-box {
-    padding: 80px 20px;
+    padding: 80px 10px;
+    gap: 10px;
   }
   .btn-login {
-    right: 16.9%;
+    right: 17.4%;
   }
 }

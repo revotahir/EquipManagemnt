@@ -5,7 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/images/logo-icon.png" type="image/png" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Login</title>
+    <title>Sign Up</title>
+    <style>
+      .inner-login {
+        height: 100vh;
+      }
+      .btn-login {
+        right: 30.6%;
+      }
+      @media (max-width: 550px) {
+        .main-box {
+          padding: 60px 10px 50px 10px;
+          gap: 10px;
+        }
+        .btn-login {
+          right: 20%;
+        }
+        .fot-pass {
+          align-items: start;
+        }
+        .fot-pass input[type="checkbox"] {
+          margin-top: 2px;
+          width: 23px;
+          height: 19px;
+        }
+      }
+    </style>
   </head>
   <body>
     <section class="reg-page">
@@ -27,10 +52,28 @@
                   />
                 </svg>
               </div>
-              <h5 class="heading">Welcome Back</h5>
+              <h5 class="heading">Create Your Account</h5>
               <span class="sub-heading"
-                >Sign in to access your account and continue your journey.</span
+                >Join us to get started. It only takes a minute.</span
               >
+              <div class="inputs">
+                <label for="comName">Company Name</label>
+                <input
+                  type="text"
+                  name="comName"
+                  id="comName"
+                  placeholder="Enter Company Name"
+                />
+              </div>
+              <div class="inputs">
+                <label for="cPhone">Phone</label>
+                <input
+                  type="tel"
+                  name="cPhone"
+                  id="cPhone"
+                  placeholder="Enter Phone number"
+                />
+              </div>
               <div class="inputs">
                 <label for="email">Email</label>
                 <input
@@ -50,10 +93,14 @@
                 />
               </div>
               <div class="fot-pass">
-                <a href="#"> Forgot Password </a>
+                <input type="checkbox" name="cCbox" id="cCbox" />
+                <span>
+                  I agree to the
+                  <a href="#">Terms & Conditions and Privacy Policy.</a>
+                </span>
               </div>
               <div>
-                <input type="submit" value="Login Now" class="btn-login" />
+                <input type="submit" value="Sign Up" class="btn-login" />
               </div>
             </div>
           </form>
