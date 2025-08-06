@@ -1761,7 +1761,8 @@ a {
   /* border: 1px solid #34ff67; */
   position: relative;
 }
-.form::before {
+.form::before,
+.form::after {
   top: 0;
   bottom: 0;
   left: 0;
@@ -1770,20 +1771,17 @@ a {
   position: absolute;
   border: 1px solid #34ff67;
   border-right: none;
-  width: 40%;
+  width: 50%;
   z-index: 1;
+  clip-path: polygon(0 0, 80% 0, 48% 100%, 100% 100%, 0 100%, 0 0);
 }
+
 .form::after {
-  top: 0;
-  bottom: 0;
+  left: unset;
   right: 0;
-  content: "";
-  display: block;
-  position: absolute;
   border: 1px solid #34ff67;
-  border-left: none;
-  width: 40%;
-  z-index: 1;
+  border-right: none;
+  transform: rotateY(180deg);
 }
 .main-box {
   display: flex;
@@ -1951,5 +1949,9 @@ a {
   }
   .btn-login {
     right: 17.4%;
+  }
+  .form::before,
+  .form::after {
+    clip-path: polygon(0 0, 70% 0, 32% 100%, 100% 100%, 0 100%, 0 0);
   }
 }
