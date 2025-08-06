@@ -22,10 +22,16 @@ File: style.css
  */
 
 /* General */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-size: 14px;
-  color: #4c5258;
+  color: #000000;
   letter-spacing: 0.5px;
   font-family: "ClashGrotesk-Regular", sans-serif;
   background-color: #f7f8fa;
@@ -1721,9 +1727,147 @@ a {
 .gap-20 {
   gap: 20px;
 }
+.text-success {
+  font-weight: 400;
+  font-size: 14px;
+}
 .justify-spc-btw {
   justify-content: space-between;
 }
+
+.reg-page {
+  background: url("../images/d9481a5f13f611abc880dabbcce0f5ed92e15492.webp")
+    fixed;
+  background-color: rgba(15, 47, 44, 0.82);
+  background-blend-mode: overlay;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.inner-login {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  align-items: center;
+}
+.containers {
+  width: 95%;
+  max-width: 1440px;
+}
+.form {
+  /* border: 1px solid #34ff67; */
+  position: relative;
+}
+.form::before {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid #34ff67;
+  border-right: none;
+  width: 50%;
+}
+.main-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 80px 55px;
+}
+.img {
+  position: absolute;
+  top: -35px;
+}
+.heading {
+  color: #ffffff;
+  font-family: "ClashGrotesk-Medium", sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.sub-heading {
+  color: #ffffff;
+  font-family: "ClashGrotesk-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.inputs label {
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.inputs input {
+  border: 1px solid #ffffffa6;
+  border-radius: 12px;
+  padding: 18px 12px;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+.inputs input:focus {
+  border: 1px solid #34ff67;
+  transition: all 0.3s ease;
+}
+.inputs input:focus-visible {
+  outline: none;
+  transition: all 0.3s ease;
+}
+.inputs input::placeholder {
+  color: #ffffff;
+}
+
+.fot-pass {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.fot-pass a {
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.fot-pass a:hover {
+  color: #34ff67;
+  transition: all 0.3s ease;
+}
+
+.btn-login {
+  cursor: pointer;
+  background-color: #34ff67;
+  border: 1px solid #34ff67;
+  border-radius: 8px;
+  padding: 16px 80px;
+  color: #0f2f2c;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  bottom: -26px;
+  right: 28%;
+}
+.btn-login:hover {
+  background-color: transparent;
+  border: 1px solid #34ff67;
+  color: #ffffff;
+}
+
 @media (max-width: 850px) {
   .flex-col-md {
     flex-direction: column;
@@ -1737,5 +1881,11 @@ a {
   .flex-col-sm {
     flex-direction: column;
     gap: 10px;
+  }
+  .main-box {
+    padding: 80px 20px;
+  }
+  .btn-login {
+    right: 16.9%;
   }
 }
