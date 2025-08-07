@@ -1735,6 +1735,16 @@ a {
   justify-content: space-between;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
+.toggle-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 96%;
+}
+
 .reg-page {
   background: url("../images/d9481a5f13f611abc880dabbcce0f5ed92e15492.webp")
     fixed;
@@ -1746,6 +1756,7 @@ a {
   height: 100vh;
   display: flex;
   justify-content: center;
+  padding: 100px 0;
 }
 .inner-login {
   display: flex;
@@ -1966,6 +1977,13 @@ a {
   }
 }
 @media (max-width: 550px) {
+  .toggle-btn {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .reg-page {
+    padding: 60px 0;
+  }
   .flex-col-sm {
     flex-direction: column;
     gap: 10px;
