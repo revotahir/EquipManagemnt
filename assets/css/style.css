@@ -1756,12 +1756,11 @@ a {
   height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 100px 0;
 }
 .inner-login {
   display: flex;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
   align-items: center;
 }
 .containers {
