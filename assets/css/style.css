@@ -1920,10 +1920,40 @@ a {
   bottom: -26px;
   right: 28%;
 }
-.btn-login:hover {
+.btn-login:hover,
+.btn-green:hover {
   background-color: transparent;
   border: 1px solid #34ff67;
   color: #ffffff;
+}
+.btn-green {
+  cursor: pointer;
+  background-color: #34ff67;
+  border: 1px solid #34ff67;
+  border-radius: 8px;
+  padding: 16px 40px;
+  color: #0f2f2c;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  z-index: 2;
+}
+.btn-green-inv {
+  z-index: 2;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #34ff67;
+  border-radius: 8px;
+  padding: 16px 40px;
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.btn-green-inv:hover {
+  background-color: #34ff67;
+  border: 1px solid #34ff67;
+  color: #0f2f2c;
 }
 
 @media (max-width: 850px) {

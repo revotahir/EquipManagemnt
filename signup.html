@@ -56,56 +56,143 @@
               <span class="sub-heading"
                 >Join us to get started. It only takes a minute.</span
               >
-              <div class="inputs">
-                <label for="comName">Company Name</label>
+              <div style="z-index: 2">
                 <input
-                  type="text"
-                  name="comName"
-                  id="comName"
-                  placeholder="Enter Company Name"
+                  type="button"
+                  value="Register Company"
+                  class="btn-green"
+                  id="companyBtn"
+                  onclick="showCompanyForm()"
+                />
+                <input
+                  type="button"
+                  value="Register User"
+                  class="btn-green-inv"
+                  id="userBtn"
+                  onclick="showUserForm()"
                 />
               </div>
-              <div class="inputs">
-                <label for="cPhone">Phone</label>
-                <input
-                  type="tel"
-                  name="cPhone"
-                  id="cPhone"
-                  placeholder="Enter Phone number"
-                />
+              <!-- company Form start here -->
+              <div id="companyForm">
+                <div class="inputs">
+                  <label for="comName">Company Name</label>
+                  <input
+                    type="text"
+                    name="comName"
+                    id="comName"
+                    placeholder="Enter Company Name"
+                  />
+                </div>
+                <div class="inputs">
+                  <label for="cPhone">Phone</label>
+                  <input
+                    type="tel"
+                    name="cPhone"
+                    id="cPhone"
+                    placeholder="Enter Phone number"
+                  />
+                </div>
+                <div class="inputs">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter Your Email"
+                  />
+                </div>
+                <div class="inputs">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter Your Password"
+                  />
+                </div>
+                <div class="fot-pass">
+                  <input type="checkbox" name="cCbox" id="cCbox" />
+                  <span>
+                    I agree to the
+                    <a href="#">Terms & Conditions and Privacy Policy.</a>
+                  </span>
+                </div>
+                <div>
+                  <input type="submit" value="Sign Up" class="btn-login" />
+                </div>
               </div>
-              <div class="inputs">
-                <label for="email">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter Your Email"
-                />
+              <!-- company Form End here -->
+
+              <!-- user Form start here -->
+              <div id="userForm" style="display: none">
+                <div class="inputs">
+                  <label for="usrName">User Name</label>
+                  <input
+                    type="text"
+                    name="usrName"
+                    id="usrName"
+                    placeholder="Enter User Name"
+                  />
+                </div>
+                <div class="inputs">
+                  <label for="cPhone">Phone</label>
+                  <input
+                    type="tel"
+                    name="cPhone"
+                    id="cPhone"
+                    placeholder="Enter Phone number"
+                  />
+                </div>
+                <div class="inputs">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter Your Email"
+                  />
+                </div>
+                <div class="inputs">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter Your Password"
+                  />
+                </div>
+                <div class="fot-pass">
+                  <input type="checkbox" name="cCbox" id="cCbox" />
+                  <span>
+                    I agree to the
+                    <a href="#">Terms & Conditions and Privacy Policy.</a>
+                  </span>
+                </div>
+                <div>
+                  <input type="submit" value="Sign Up" class="btn-login" />
+                </div>
               </div>
-              <div class="inputs">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Enter Your Password"
-                />
-              </div>
-              <div class="fot-pass">
-                <input type="checkbox" name="cCbox" id="cCbox" />
-                <span>
-                  I agree to the
-                  <a href="#">Terms & Conditions and Privacy Policy.</a>
-                </span>
-              </div>
-              <div>
-                <input type="submit" value="Sign Up" class="btn-login" />
-              </div>
+              <!-- user Form End here -->
             </div>
           </form>
         </div>
       </div>
     </section>
   </body>
+
+  <script>
+    function showCompanyForm() {
+      document.getElementById("companyForm").style.display = "block";
+      document.getElementById("userForm").style.display = "none";
+      document.getElementById("companyBtn").className = "btn-green";
+      document.getElementById("userBtn").className = "btn-green-inv";
+    }
+
+    function showUserForm() {
+      document.getElementById("companyForm").style.display = "none";
+      document.getElementById("userForm").style.display = "block";
+      document.getElementById("companyBtn").className = "btn-green-inv";
+      document.getElementById("userBtn").className = "btn-green";
+    }
+  </script>
 </html>
