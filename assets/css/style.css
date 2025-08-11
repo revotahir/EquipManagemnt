@@ -1787,16 +1787,27 @@ a {
 }
 
 .reg-page {
-  background: url("../images/d9481a5f13f611abc880dabbcce0f5ed92e15492.webp")
-    fixed;
+  background: url("../images/d9481a5f13f611abc880dabbcce0f5ed92e15492.webp");
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: rgba(15, 47, 44, 0.82);
-  background-blend-mode: overlay;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.reg-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(15, 47, 44, 0.82);
+  z-index: -1;
 }
 
 .inner-login {
